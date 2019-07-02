@@ -1,0 +1,47 @@
+from random import randint
+from time import sleep
+itens = ('pedra','papel','tesoura')
+computador = randint(0, 2)
+print('''SUAS OPÇÕES:
+	[0] Pedra
+	[1] Papel
+	[2] Tesoura''')
+jogador = int(input('qual é a sua jogada?'))
+print('JO')
+sleep(1)
+print('KEN')
+sleep(1)
+print('PO!!!')
+print('-='*11)
+print('O computador jogou {}'.format(itens[computador]))
+print('Jogador jogou {}'.format(itens[jogador]))
+print('-='*11)
+if computador == 0: #computador jogou pedra
+    if jogador == 0: #jogador jogou pedra
+        	print('Deu empate')
+    elif jogador == 1: #Jogador jogou papel
+        print('VOCÊ VENCEU!!!')
+    elif jogador == 2:#Jogador jogou tesoura
+        print('Você perdeu')     
+    else:
+        print('Jogada invalida')    
+elif computador == 1:#computador jogou papel
+     if jogador == 0:#jogador jogou pedra
+        print('Você perdeu')
+     elif jogador == 1:#jogador jogou papel
+         print('Deu empate')
+     elif jogador == 2:#jogador jogou tesoura
+         print('VOCÊ VENCEU!!!') 
+     else:
+         print('Jogada invalida')
+elif computador == 2:#computador jogou tesoura
+     if jogador == 0:#jogador jogou pedra
+         print('VOCÊ VENCEU!!!')
+     elif jogador == 1:#jogador jogou papel
+         print('Você perdeu')
+     elif jogador == 2:#jogador jogou tesoura
+         print('Deu empate')                
+     else:
+         print('Jogada invalida')    
+     
+             	
