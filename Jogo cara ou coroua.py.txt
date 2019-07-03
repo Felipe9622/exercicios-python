@@ -1,0 +1,31 @@
+from random import randint
+itens = ('cara','coroua')
+computador =randint(0,1)
+print('*'*11)
+print('''SUAS OPÇÕES:
+[0] Cara
+[1] Coroua''')
+print('*'*11)
+jogador = int(input('Qual lado escolhe ?'))
+
+print('-='*11)
+print('A moeda virou {}'.format(itens[computador]))
+print('Você pediu {}'.format(itens[jogador]))
+print('-='*11)
+if computador == 0:
+    if jogador == 0:
+        print('VOCÊ GANHOU !!!')
+    elif jogador == 1:
+        print('Você perdeu')   
+    else:
+        print('jogada invalida')
+elif computador == 1:
+    if jogador == 0:
+        print('Você perdeu')
+    elif jogador == 1:
+        print('VOCÊ GANHOU !!!')
+    else:
+        print('jogada invalida')
+               
+         
+ 
